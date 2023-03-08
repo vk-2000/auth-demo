@@ -1,19 +1,20 @@
+/* eslint-disable no-unused-vars */
 /** @type {import('sequelize-cli').Migration} */
-const {User} = require('../../src/models');
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable('Users', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
-                primaryKey: true,
                 type: Sequelize.INTEGER,
             },
             username: {
+                allowNull: false,
                 type: Sequelize.STRING,
                 primaryKey: true,
             },
             password: {
+                allowNull: false,
                 type: Sequelize.STRING,
             },
         });

@@ -18,5 +18,21 @@ describe('User Controller', () => {
             await userController.createUser(req, res);
             expect(res.status).toHaveBeenCalledWith(201);
         });
+        it('should return 400 if username is not unique', async () => {
+            jest.spyOn(usersService, 'createUser').mockRejectedValue({ code: 400, message: 'Username must be unique' });
+            const req = {
+                body: {
+                    username: 'username',
+                    password: 'password'
+                }
+            };
+            const res = {
+                status: jest.fn().mockReturnThis(),
+                send: jest.fn()
+            };
+            await userController.createUser(req, res);
+            expect(res.status).toHaveBeenCalledWith(400);
+            expect(res.send).toHaveBeenCalledWith({ message: 'Username must be unique' });
+        });
     });
 });
