@@ -13,9 +13,5 @@ module.exports = {
             .required()
     }),
 
-    validateToken: joi.object({
-        token: joi
-            .string()
-            .required()
-    })
+    validateToken: joi.string().required()
 };

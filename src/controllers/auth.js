@@ -11,12 +11,12 @@ const loginUser = async (req, res) => {
 };
 
 const verifyToken = async (req, res) => {
-    const { token } = req.body;
+    const token = req.headers.authorization;
     try {
         const decoded = await authService.verifyToken(token);
-        res.status(200).json({ ...decoded, valid: true });
+        res.status(200).json({ ...decoded });
     } catch (err) {
-        return res.status(401).json({ valid: false, message: err.message });
+        return res.status(401).json({ message: err.message });
     }
 };
 

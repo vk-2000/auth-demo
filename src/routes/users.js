@@ -6,6 +6,6 @@ const userSchema = require('../schemas/user.schema');
 
 const router = express.Router();
 
-router.post('/',schemaValidation(userSchema.create), usersController.createUser);
+router.post('/',schemaValidation.bodyValidation(userSchema.create), usersController.createUser);
 
 module.exports = router;

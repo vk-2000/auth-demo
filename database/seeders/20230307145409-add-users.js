@@ -14,8 +14,8 @@ module.exports = {
      * }], {});
     */
         queryInterface.bulkInsert('Users', [
-            {username: 'abc@gmail.com', password: await bcrypt.hashSync('password', 10)},
-            {username: 'xyz@gmail.com', password: await bcrypt.hashSync('password', 10)},
+            {username: 'abc123', password: await bcrypt.hashSync('password', 10)},
+            {username: 'xyz123', password: await bcrypt.hashSync('password', 10)},
         ], {});
     },
 

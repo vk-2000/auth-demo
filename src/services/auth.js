@@ -22,8 +22,8 @@ const loginUser = async (username, password) => {
 };
 const verifyToken = async (token) => {
     const redisClient = await redisUtils.getRedisClient();
-    const userId = await redisClient.get(token);
-    if (!userId) {
+    const isToken = await redisClient.get(token);
+    if (!isToken) {
         throw new HTTPError('Unauthorized');
     }
     const decoded = jwt.verify(token, process.env.SECRET);

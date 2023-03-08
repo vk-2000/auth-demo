@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678258527394" clover="3.2.0">
-  <project timestamp="1678258527394" name="All files">
-    <metrics statements="98" coveredstatements="86" conditionals="20" coveredconditionals="13" methods="18" coveredmethods="12" elements="136" coveredelements="111" complexity="0" loc="98" ncloc="98" packages="6" files="9" classes="9"/>
+<coverage generated="1678286193838" clover="3.2.0">
+  <project timestamp="1678286193838" name="All files">
+    <metrics statements="123" coveredstatements="111" conditionals="28" coveredconditionals="21" methods="22" coveredmethods="16" elements="173" coveredelements="148" complexity="0" loc="123" ncloc="123" packages="8" files="11" classes="11"/>
     <package name="database.config">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="config.js" path="/Users/Varun_Kumar/Desktop/end-template/auth/database/config/config.js">
@@ -36,6 +36,35 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.middlewares">
+      <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
+      <file name="schemaValidation.js" path="/Users/Varun_Kumar/Desktop/end-template/auth/src/middlewares/schemaValidation.js">
+        <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.models">
@@ -73,6 +102,14 @@
         <line num="21" count="4" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="34" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.schemas">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="auth.schema.js" path="/Users/Varun_Kumar/Desktop/end-template/auth/src/schemas/auth.schema.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
@@ -139,10 +176,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="HTTPError.js" path="/Users/Varun_Kumar/Desktop/end-template/auth/src/utils/errors/HTTPError.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
       </file>
     </package>
   </project>

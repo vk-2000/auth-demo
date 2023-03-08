@@ -38,8 +38,8 @@ describe('Auth Controller', () => {
         it('should return a valid token', async () => {
             jest.spyOn(authService, 'verifyToken').mockResolvedValue({ id: 1, username: 'username' });
             const req = {
-                body: {
-                    token: 'token'
+                headers: {
+                    authorization: 'token'
                 }
             };
             const res = {
@@ -52,8 +52,8 @@ describe('Auth Controller', () => {
         it('should return an invalid token', async () => {
             jest.spyOn(authService, 'verifyToken').mockRejectedValue(new Error('error'));
             const req = {
-                body: {
-                    token: 'token'
+                headers: {
+                    authorization: 'token'
                 }
             };
             const res = {

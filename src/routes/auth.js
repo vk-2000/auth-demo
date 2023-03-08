@@ -5,7 +5,7 @@ const authSchema = require('../schemas/auth.schema');
 
 const router = express.Router();
 
-router.post('/token/validate', schemaValidation(authSchema.validateToken), authController.verifyToken);
-router.post('/login', schemaValidation(authSchema.login), authController.loginUser);
+router.post('/token/validate', schemaValidation.tokenValidation(authController.verifyToken), authController.verifyToken);
+router.post('/login', schemaValidation.bodyValidation(authSchema.login), authController.loginUser);
 
 module.exports = router;
